@@ -152,4 +152,46 @@ observer - observer of this image. Just pass 'this' (Jpanel class).
 
 Remember! When you zoom into drawn image, it will slowly lose quality. Lossless zooming works only with shapes.
 
-Thanks for using JZoom <3
+# Disabling zooming and dragging
+
+To manage zooming use this command
+
+```java
+jZoom.allowZooming(bool);
+```
+
+When bool == true zooming will be enabled.
+When bool == false zooming will be disabled.
+
+Zooming is allowed by default.
+
+------------------
+
+To manage dragging use this command
+
+```java
+jZoom.allowDragging(bool);
+```
+
+When bool == true draging will be enabled.
+When bool == false draging will be disabled.
+
+Dragging is allowed by default.
+
+# Follow point feature
+
+JZoom has a feature that allows to follow a certain point on canvas.
+
+To enable this feature use this command (It should be called in every frame):
+
+```java
+jZoom.followPoint(x,y,zoom);
+```
+
+(x,y) - coordinates of the point to follow.
+
+zoom - zoom while following point. Example - 3.14.
+
+It is recommended to disable zooming and dragging while using this feature.
+
+## Thanks for using JZoom <3

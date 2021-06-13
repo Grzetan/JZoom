@@ -9,7 +9,7 @@ public class GamePanel extends JPanel {
     Thread thread;
     JZoom jZoom = new JZoom(1000,800);
     Point p = new Point(0,0);
-    double zoom = 1;
+
     GamePanel(){
         this.setPreferredSize(new Dimension((int) WIDTH,(int) HEIGHT));
         jZoom.installMouseAdapter(this);
@@ -34,7 +34,6 @@ public class GamePanel extends JPanel {
         jZoom.drawRect(bounds[0], bounds[2], bounds[1] - bounds[0], bounds[3] - bounds[2], Color.BLUE);
         p.x += 1;
         p.y += 1;
-        zoom += 0.1;
     }
 
     public void run(){
